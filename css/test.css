@@ -1,10 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #container {
     width: 600px;
     margin: 0 auto;
+    padding: 10px;
+    background-color: #373737;
 }
 
 .title_center {
     text-align: center;
+    color: wheat;
 }
 
 #logo {
@@ -12,17 +20,37 @@
     height: 200px;
 }
 
-#duncan {
-    width: 400px;
-    height: 600px;
-    margin: 0 100px;
-}
-
 #container ul {
     list-style: none;
 }
 
-#container a {
-    display: block;
+li {
+    color: gray;
+}
+
+footer {
+    margin: 0 auto;
     text-align: center;
+}
+
+footer a {
+    text-align: center;
+    margin: 20px;
+    color: wheat;
+}
+
+footer #back_top {
+    display: block;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table td,
+th {
+    border: 1px solid #e6e6e6;
+    text-align: center;
+    color: grey;
 }
