@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table and input</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #form {
+            background-color: wheat;
+            margin: 0 auto;
+            padding-left: 100px;
+            text-align: left;
+            width: 400px;
+        }
+        
+        #table {
+            background-color: wheat;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        label {
+            display: block;
+        }
+        
+        #output {
+            background-color: wheat;
+            margin: 50px auto;
+            width: 500px;
+            text-align: center
+        }
+        
+        .number {
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table border="1" id="table">
+            <caption>日程表</caption>
+            <tr>
+                <th>时间</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+            </tr>
+            <tr>
+                <th rowspan="2">上午</th>
+                <td>语文</td>
+                <td>数学</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>外语</td>
+            </tr>
+            <tr>
+                <td>语文</td>
+                <td>数学</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>外语</td>
+            </tr>
+
+            <tr>
+                <td colspan="6"></td>
+            </tr>
+            <tr>
+                <th rowspan="2">下午</th>
+                <td>语文</td>
+                <td>数学</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>外语</td>
+            </tr>
+            <tr>
+                <td>语文</td>
+                <td>数学</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>外语</td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="margin-top:40px" id="form" style="padding-left:0px">
+        <form action="#" method="get">
+            <label>请输入姓名:<input type="text" name="username" placeholder="姓名" maxlength="1"></label>
+            <label>请输入密码:<input type="password" name="password" placeholder="密码" minlength="6"></label>
+            <span>请选择你的性别:
+                <input type="radio" name="sex" value="man" checked>男
+                <input type="radio" name="sex" value="woman">女
+            </span><br>
+            <span> 请选择喜欢的球类:      
+             <input type="checkbox" name="hubby" value="0">篮球
+            <input type="checkbox" name="hubby" value="0">足球
+            <input type="checkbox" name="hubby" value="0">网球
+            </span><br>
+            <label>请选择提交文件:
+                  <input type="file" name="file" accept="text/plain">
+            </label>
+            <span>选择出生地:</span>
+            <select name="adrress">
+                <option value="028" selected>四川</option>
+                <option value="010">北京</option>
+            </select><br>
+            <p>你的建议:</p>
+            <textarea rows="10" cols="20" name="suggest"></textarea>
+            <button type="input">提交</button>
+            <button type="reset">重置</button>
+        </form>
+    </div>
+
+    <div id="output">
+        <form action="#" oninput="number.value=Math.pow(first.value,last.value)">
+
+            <input type="number" name="first" value="1" class="number"> 的 <input type="number" name="last" value="1" class="number"> 次方是 <output name="number">1</output>
+
+        </form>
+    </div>
+</body>
+
+</html>
