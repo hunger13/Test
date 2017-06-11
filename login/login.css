@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: rgb(244, 249, 251);
+}
+
+#body {
+    margin: 0 auto;
+    padding: 30px 0 102px;
+    width: 300px;
+    text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+}
+
+#index_header {
+    text-align: center;
+}
+
+#index_logo {
+    display: inline-block;
+    width: 96px;
+    height: 44.4px;
+    text-align: center;
+    background-size: contain;
+    background-image: url("./images/zhihu_logo.png");
+}
+
+#subtitle {
+    margin: 30px 0 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+}
+
+#index_tab {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#index_tab a {
+    margin: 15px;
+    width: 72px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    /*opacity: .7;*/
+    color: #555;
+}
+
+#index_tab a.active {
+    color: #0f88eb;
+    border-bottom: 2px solid #0f88eb;
+}
+
+#index_info {
+    width: 100%;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#index_info div input {
+    padding: 15px 12px;
+    width: 100%;
+    font-size: 14px;
+    font-family: inherit;
+    box-shadow: none;
+    background: #fff;
+    outline: none;
+}
+
+.bottom_line {
+    border-bottom: 1px solid #d5d5d5;
+}
+
+#input_button {
+    margin-top: 20px;
+    background: #0f88eb;
+    box-shadow: none;
+    border-radius: 3px;
+    line-height: 41px;
+}
+
+#input_button button {
+    font-size: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.hide_text {
+    font: 0;
+    color: transparent;
+    text-shadow: none;
+    border: 0;
+}
+
+p {
+    margin-top: 21px;
+    font-size: 13px;
+    text-align: center;
+    color: #999;
+}
+
+p a {
+    color: #698ebf;
+}
+
+#footer {
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+#footer a,
+span {
+    margin-top: 21px;
+    font-size: 12px;
+    color: #aebdc9;
+}
+
+#footer span {
+    padding: 4px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 14px;
+    color: rgb(193, 193, 193);
+}
+
+input:-moz-placeholder {
+    font-size: 14px;
+    color: rgb(193, 193, 193);
+}
+
+#input:-ms-input-placeholder {
+    font-size: 14px;
+    color: rgb(193, 193, 193);
+}
+
+#Mycanvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    width: 100%;
+    opacity: .4;
+}
