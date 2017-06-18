@@ -79,11 +79,6 @@ main {
     animation-iteration-count: infinite;
 }
 
-
-/*#animation div:hover {
-
-}*/
-
 @keyframes move {
     0% {
         left: 0px;
@@ -108,6 +103,10 @@ main {
     /*属性用于指定观察者与 z=0 平面的距离，使具有 3D 变换的元素产生透视效果。*/
     transform-origin: center center;
     animation: roll 40s linear infinite;
+}
+
+#banner:hover {
+    animation-play-state: paused;
 }
 
 #banner div {
