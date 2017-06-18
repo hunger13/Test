@@ -1,0 +1,157 @@
+html,
+body {
+    height: 100%;
+}
+
+main {
+    perspective: 1200px;
+}
+
+.title {
+    text-align: center;
+}
+
+.normal {
+    display: inline-block;
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    background-color: wheat;
+}
+
+#rotate:hover {
+    transition: .6s;
+    transform: rotate(30deg);
+}
+
+#translate:hover {
+    transition: .6s;
+    transform: translate(30px, -20px);
+}
+
+#scale:hover {
+    transition: .6s;
+    transform: scale(1.5, 0.5);
+}
+
+#skew:hover {
+    transition: .6s;
+    transform: skew(10deg, 20deg);
+}
+
+#origin:hover {
+    transition: .6s;
+    transform-origin: left top;
+    transform: rotate(20deg);
+}
+
+#transition {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    background-color: royalblue;
+    transition: background-color 1s linear .1s, width 1s ease-in, height 1s ease-in-out;
+}
+
+#transition:hover {
+    background-color: rebeccapurple;
+    width: 100px;
+    height: 100px;
+}
+
+#animation {
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+#animation div {
+    width: inherit;
+    height: inherit;
+    background-color: rosybrown;
+    position: absolute;
+    /*动画名称*/
+    animation-name: move;
+    /*动画持续时间*/
+    animation-duration: 3s;
+    /*重复次数*/
+    animation-iteration-count: infinite;
+}
+
+
+/*#animation div:hover {
+
+}*/
+
+@keyframes move {
+    0% {
+        left: 0px;
+        transform: rotate(0deg);
+    }
+    100% {
+        left: 200px;
+        transform: rotate(45deg);
+    }
+}
+
+#banner {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 200px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /*子元素全都保持3d*/
+    transform-style: preserve-3d;
+    /*属性用于指定观察者与 z=0 平面的距离，使具有 3D 变换的元素产生透视效果。*/
+    transform-origin: center center;
+    animation: roll 40s linear infinite;
+}
+
+#banner div {
+    background-color: rgba(247, 247, 247, .7);
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    font-size: 100px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+}
+
+@keyframes roll {
+    from {
+        transform: rotateY(0 translateZ(200px));
+    }
+    to {
+        transform: rotateY(360deg) translateZ(200px);
+    }
+}
+
+#banner div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(200px);
+}
+
+#banner div:nth-child(2) {
+    transform: rotateY(60deg) translateZ(200px);
+}
+
+#banner div:nth-child(3) {
+    transform: rotateY(120deg) translateZ(200px);
+}
+
+#banner div:nth-child(4) {
+    transform: rotateY(180deg) translateZ(200px);
+}
+
+#banner div:nth-child(5) {
+    transform: rotateY(240deg) translateZ(200px);
+}
+
+#banner div:nth-child(6) {
+    transform: rotateY(300deg) translateZ(200px);
+}
