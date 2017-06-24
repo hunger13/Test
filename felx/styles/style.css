@@ -76,6 +76,7 @@ li {
 .bar {
     display: none;
     position: absolute;
+    top: 0;
     right: 10px;
     font-size: 25px;
     color: gray;
