@@ -1,0 +1,19 @@
+.navbar {
+    &.navbar-inverse {
+        margin: 0;
+        background: transparent;
+        border: 0;
+    }
+    @include on-device(mobile) {
+        position: relative;
+        .container {
+            background: rgba(55, 55, 55, .8);
+            .navbar-header {
+                .navbar-toggle {
+                    border: 0;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

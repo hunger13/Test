@@ -1,0 +1,15 @@
+footer {
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    background: url("../images/bg-footer.png") no-repeat center;
+    button {
+        width: 100%;
+    }
+}
+
+@include on-device(mobile) {
+    &.email-btn {
+        padding-top: 10px;
+    }
+}

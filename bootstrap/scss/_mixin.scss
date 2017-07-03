@@ -1,0 +1,19 @@
+@mixin balck-overlay($number) {
+    background-color: #000;
+    opacity: $number;
+}
+
+$desktop: 1025px;
+$mobile:768px;
+@mixin on-device($device) {
+    @if $device==desktop {
+        @media (min-width: $desktop) {
+            @content;
+        }
+    }
+    @else if $device==mobile {
+        @media (max-width: $mobile) {
+            @content;
+        }
+    }
+}

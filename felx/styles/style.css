@@ -137,10 +137,12 @@ li {
     .nav {
         flex-direction: column;
         justify-content: space-between;
+        overflow: hidden;
     }
     .list {
         display: none;
         flex-direction: column;
+        z-index: 0;
     }
     .list ul li {
         display: block;
