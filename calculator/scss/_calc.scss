@@ -1,0 +1,48 @@
+$max-width: 375px;
+$max-height: 667px;
+$display-bg-color: rgba(44, 82, 131, .6);
+$other-bg-color: rgb(205, 205, 205);
+$num-bg-color: rgba(217, 217, 217, .8); //238 128 38
+$com-bg-color: rgb(238, 128, 38);
+$num-font-size: 27px;
+$display-font-size: 50px;
+.cal {
+    background-color: wheat;
+    height: $max-height;
+    width: $max-width;
+    margin: 100px auto;
+    overflow: hidden;
+    .dispaly {
+        width: $max-width;
+        height: ($max-height * 0.3);
+        text-align: right;
+        line-height: ($max-height * 0.4);
+        font-size: $display-font-size;
+        background-color: $display-bg-color;
+    }
+    .keypod {
+        width: $max-width;
+        height: ($max-height * 0.7);
+        .btn {
+            float: left;
+            text-align: center;
+            font-size: $num-font-size;
+            width: ($max-width * 0.25);
+            height: ($max-height * 0.2 * 0.7);
+            line-height: ($max-height * 0.2 * 0.7);
+        }
+        .btn.num {
+            background-color: $num-bg-color;
+        }
+        .btn.other {
+            background-color: $other-bg-color;
+        }
+        .btn.com {
+            background-color: $com-bg-color;
+        }
+        .btn.zero {
+            text-align: center;
+            width: ($max-width * 0.5);
+        }
+    }
+}

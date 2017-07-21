@@ -1,0 +1,32 @@
+.cal {
+  background-color: wheat;
+  height: 667px;
+  width: 375px;
+  margin: 100px auto;
+  overflow: hidden; }
+  .cal .dispaly {
+    width: 375px;
+    height: 200.1px;
+    text-align: right;
+    line-height: 266.8px;
+    font-size: 50px;
+    background-color: rgba(44, 82, 131, 0.6); }
+  .cal .keypod {
+    width: 375px;
+    height: 466.9px; }
+    .cal .keypod .btn {
+      float: left;
+      text-align: center;
+      font-size: 27px;
+      width: 93.75px;
+      height: 93.38px;
+      line-height: 93.38px; }
+    .cal .keypod .btn.num {
+      background-color: rgba(217, 217, 217, 0.8); }
+    .cal .keypod .btn.other {
+      background-color: #cdcdcd; }
+    .cal .keypod .btn.com {
+      background-color: #ee8026; }
+    .cal .keypod .btn.zero {
+      text-align: center;
+      width: 187.5px; }
