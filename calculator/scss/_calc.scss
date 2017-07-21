@@ -5,20 +5,27 @@ $other-bg-color: rgb(205, 205, 205);
 $num-bg-color: rgba(217, 217, 217, .8); //238 128 38
 $com-bg-color: rgb(238, 128, 38);
 $num-font-size: 27px;
-$display-font-size: 50px;
+$display-font-size: 70px;
 .cal {
     background-color: wheat;
     height: $max-height;
     width: $max-width;
     margin: 100px auto;
     overflow: hidden;
+    cursor: pointer;
     .dispaly {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         width: $max-width;
         height: ($max-height * 0.3);
-        text-align: right;
-        line-height: ($max-height * 0.4);
         font-size: $display-font-size;
         background-color: $display-bg-color;
+        #display {
+            // width: 90%;
+            padding-right: 10%;
+            text-align: right;
+        }
     }
     .keypod {
         width: $max-width;

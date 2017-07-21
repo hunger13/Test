@@ -7,7 +7,8 @@
     let $per = document.querySelector(".btn.other.per");
     let isClean = false;
     let isCompate = false;
-    let fontSize = 50;
+    let fontSize = 70;
+    let maxWidth = 350;
 
     $display.innerHTML = "0";
 
@@ -19,15 +20,21 @@
 
     // 检测是否越界
     let checkDisplayWidth = function() {
-        $display.style.fontSize = "50px";
-        while ($display.offsetWidth >= 350) $display.style.fontSize = (fontSize -= 8) + 'px';
+        fontSize = 70;
+        $display.style.fontSize = fontSize + "px";
+        (function check() {
+            if ($display.offsetWidth > maxWidth) {
+                $display.style.fontSize = (fontSize -= 5) + 'px';
+                check();
+            }
 
+        })()
     }
 
     // 清除
     $ac.addEventListener("click", function() {
         $display.innerHTML = "0";
-        $display.style.fontSize = "50px";
+        checkDisplayWidth();
     });
 
 
@@ -37,7 +44,7 @@
         if ($display.innerHTML == "0") return;
         $display.innerHTML = $display.innerHTML.slice(0, -1);
         if ($display.innerHTML.length == 0) $display.innerHTML = "0";
-
+        checkDisplayWidth();
     });
 
     // 百分比

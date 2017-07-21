@@ -3,14 +3,19 @@
   height: 667px;
   width: 375px;
   margin: 100px auto;
-  overflow: hidden; }
+  overflow: hidden;
+  cursor: pointer; }
   .cal .dispaly {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 375px;
     height: 200.1px;
-    text-align: right;
-    line-height: 266.8px;
-    font-size: 50px;
+    font-size: 70px;
     background-color: rgba(44, 82, 131, 0.6); }
+    .cal .dispaly #display {
+      padding-right: 10%;
+      text-align: right; }
   .cal .keypod {
     width: 375px;
     height: 466.9px; }
