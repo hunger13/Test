@@ -8,7 +8,7 @@
     let isClean = false;
     let isCompate = false;
     let fontSize = 70;
-    let maxWidth = 350;
+    let maxWidth = 310;
 
     $display.innerHTML = "0";
 

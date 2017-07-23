@@ -1,55 +1,78 @@
 $max-width: 375px;
-$max-height: 667px;
-$display-bg-color: rgba(44, 82, 131, .6);
+// $min-width: 320px;
+$display-bg-color: rgba(41, 41, 41, .9);
 $other-bg-color: rgb(205, 205, 205);
 $num-bg-color: rgba(217, 217, 217, .8); //238 128 38
 $com-bg-color: rgb(238, 128, 38);
 $num-font-size: 27px;
 $display-font-size: 70px;
+html,
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cal {
-    background-color: wheat;
-    height: $max-height;
-    width: $max-width;
-    margin: 100px auto;
+    display: flex;
+    // background-color: wheat;
+    height: 100%;
+    width: 100%;
+    max-width: $max-width;
+    max-height: 650px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgba(41, 41, 41, .7);
+    border-radius: 3px;
     overflow: hidden;
     cursor: pointer;
-    .dispaly {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: $max-width;
-        height: ($max-height * 0.3);
-        font-size: $display-font-size;
-        background-color: $display-bg-color;
-        #display {
-            // width: 90%;
-            padding-right: 10%;
-            text-align: right;
-        }
+}
+
+.dispaly {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    padding-right: 10%;
+    font-size: $display-font-size;
+    background-color: $display-bg-color;
+    overflow: hidden;
+    #display {
+        color: whitesmoke;
+        text-align: right;
     }
-    .keypod {
-        width: $max-width;
-        height: ($max-height * 0.7);
-        .btn {
-            float: left;
-            text-align: center;
-            font-size: $num-font-size;
-            width: ($max-width * 0.25);
-            height: ($max-height * 0.2 * 0.7);
-            line-height: ($max-height * 0.2 * 0.7);
-        }
-        .btn.num {
-            background-color: $num-bg-color;
-        }
-        .btn.other {
-            background-color: $other-bg-color;
-        }
-        .btn.com {
-            background-color: $com-bg-color;
-        }
-        .btn.zero {
-            text-align: center;
-            width: ($max-width * 0.5);
-        }
+}
+
+.keypod {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    .btn {
+        flex: 1;
+        flex-basis: 25%;
+        text-align: center;
+        font-size: $num-font-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn.num {
+        background-color: $num-bg-color;
+    }
+    .btn.other {
+        background-color: $other-bg-color;
+    }
+    .btn.com {
+        background-color: $com-bg-color;
+        color: wheat;
+    }
+    .btn.zero {
+        text-align: center;
+        flex-basis: 50%;
+        // width: ($max-width * 0.5);
     }
 }

@@ -1,37 +1,58 @@
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .cal {
-  background-color: wheat;
-  height: 667px;
-  width: 375px;
-  margin: 100px auto;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-width: 375px;
+  max-height: 650px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 2px rgba(41, 41, 41, 0.7);
+  border-radius: 3px;
   overflow: hidden;
   cursor: pointer; }
-  .cal .dispaly {
+
+.dispaly {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+  padding-right: 10%;
+  font-size: 70px;
+  background-color: rgba(41, 41, 41, 0.9);
+  overflow: hidden; }
+  .dispaly #display {
+    color: whitesmoke;
+    text-align: right; }
+
+.keypod {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap; }
+  .keypod .btn {
+    flex: 1;
+    flex-basis: 25%;
+    text-align: center;
+    font-size: 27px;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    width: 375px;
-    height: 200.1px;
-    font-size: 70px;
-    background-color: rgba(44, 82, 131, 0.6); }
-    .cal .dispaly #display {
-      padding-right: 10%;
-      text-align: right; }
-  .cal .keypod {
-    width: 375px;
-    height: 466.9px; }
-    .cal .keypod .btn {
-      float: left;
-      text-align: center;
-      font-size: 27px;
-      width: 93.75px;
-      height: 93.38px;
-      line-height: 93.38px; }
-    .cal .keypod .btn.num {
-      background-color: rgba(217, 217, 217, 0.8); }
-    .cal .keypod .btn.other {
-      background-color: #cdcdcd; }
-    .cal .keypod .btn.com {
-      background-color: #ee8026; }
-    .cal .keypod .btn.zero {
-      text-align: center;
-      width: 187.5px; }
+    justify-content: center; }
+  .keypod .btn.num {
+    background-color: rgba(217, 217, 217, 0.8); }
+  .keypod .btn.other {
+    background-color: #cdcdcd; }
+  .keypod .btn.com {
+    background-color: #ee8026;
+    color: wheat; }
+  .keypod .btn.zero {
+    text-align: center;
+    flex-basis: 50%; }
