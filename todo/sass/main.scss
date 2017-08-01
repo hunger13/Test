@@ -1,0 +1,99 @@
+$normal-font-size: 22px;
+@mixin head {
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  background-color: royalblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .fa {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.app {
+  position: relative;
+  height: 100%;
+  height: 100vh;
+  font-size: $normal-font-size;
+  color: white;
+}
+
+.main {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  .head {
+    @include head;
+  }
+  .tableview {
+    width: 100%;
+    height: calc(100% - 64px);
+  }
+}
+
+.cell {
+  height: 44px;
+  color: #666;
+  font-size: 20px;
+  line-height: 44px;
+  margin-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid gray;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@keyframes push {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: none;
+  .head {
+    @include head;
+  }
+  &.push {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    animation-name: push;
+    animation-duration: .3s;
+  }
+}
+
+.input-note {
+  width: 100%;
+  height: calc(100% - 64px);
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note {
+  width: 80%;
+  height: 80%;
+}
+
+.delete {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  color: red;
+  display: none;
+}
