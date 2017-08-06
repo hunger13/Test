@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ajax</title>
+
+    <style>
+        #content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            width: 100%;
+        }
+        
+        .cats {
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 0 8px 30px -5px grey;
+        }
+        
+        img {
+            width: 300px;
+            height: 300px;
+        }
+        
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content"></div>
+    <button type="button" class="btn">加载更多</button>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+    <script>
+        let URL = 'https://octocats.now.sh/api/octocats';
+        let $content = document.querySelector("#content");
+        let $button = document.querySelector(".btn");
+        let page = 1;
+
+        function laodURL(url) {
+            $.getJSON(url, function(res) {
+                console.log(res.data);
+                let datas = res.data;
+                let html = "";
+                for (var i = 0; i < datas.length; i++) {
+                    var element = datas[i];
+                    html += `<div class="cats"><img src="${element.image}" "><p>${element.name}</p></div>`
+                }
+                $content.innerHTML += html;
+            })
+
+        }
+        laodURL(URL);
+        $button.addEventListener("click", function(e) {
+            page += 1;
+            let newURL = `${URL}?page=${page}`;
+            laodURL(newURL);
+        })
+    </script>
+</body>
+
+</html>
