@@ -23,7 +23,7 @@ let cleanList = function() {
 };
 
 // 保存 (修改或新增)
-let save = function() {
+var save = function() {
     if ($(".note").length <= 0) return;
     if (index != -1) lists[index].text = $(".note").val();
     else lists.push({
