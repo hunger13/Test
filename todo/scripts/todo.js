@@ -24,7 +24,11 @@ let cleanList = function() {
 
 // 保存 (修改或新增)
 var save = function() {
-    if ($(".note").length <= 0) return;
+
+    if ($(".note").val().length <= 0) {
+        alert("请输入内容");
+        return;
+    }
     if (index != -1) lists[index].text = $(".note").val();
     else lists.push({
         text: $(".note").val()
@@ -48,7 +52,6 @@ let display = function() {
     let html = lists.map(function(note, i) {
         return (`<div class='cell' data-index='${i}'>${note.text}</div>`);
     }).join("");
-    console.log(html);
     $("#tableview").html(html);
 };
 
