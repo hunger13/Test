@@ -1,0 +1,27 @@
+.github {
+  margin: 200px auto;
+  width: 300px;
+  background-color: #eee;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 3px 1px #e0e0e0; }
+  .github img {
+    display: block;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 2px 2px 2px 2px #e5e5e5; }
+
+.repo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .repo .repoName {
+    padding-left: 20px;
+    color: grey; }
+  .repo .star {
+    padding-right: 20px;
+    color: gray; }

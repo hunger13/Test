@@ -34,8 +34,8 @@ var save = function() {
         text: $(".note").val()
     });
     localStorage.setItem("todo-list", JSON.stringify(lists));
-    display();
     pop();
+    display();
 
 };
 
@@ -53,6 +53,7 @@ let display = function() {
         return (`<div class='cell' data-index='${i}'>${note.text}</div>`);
     }).join("");
     $("#tableview").html(html);
+
 };
 
 //  编辑
