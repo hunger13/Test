@@ -32,8 +32,6 @@
             })
             return userData;
         })
-        .then(userData => {
-            $content.innerHTML = html;
-        })
+        .then(userData => $content.innerHTML = html);
 
 })()
