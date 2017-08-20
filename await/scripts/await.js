@@ -4,8 +4,8 @@ class Github {
         try {
             let res = await fetch(url);
             let userData = await res.json();
-            await (html += `<h1>${userData.login}</h1>`);
-            await (html += `<img src="${userData.avatar_url}" alt="">`); //头像
+            html += `<h1>${userData.login}</h1>`;
+            html += `<img src="${userData.avatar_url}" alt="">`; //头像
 
             let repoData = await fetch(userData.repos_url);
             let repos = await repoData.json();
