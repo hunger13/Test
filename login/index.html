@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content=" width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="shortcut icon" href="https://static.zhihu.com/static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./login.css">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div id="input_button">
+                <div class="input_button">
                     <button type="input">注册知乎</button>
                 </div>
                 <p>点击「注册」按钮，即代表你同意
@@ -151,6 +151,8 @@
             }
         }
 
+
+
         //调用执行
         window.onload = function() {
             init();
@@ -167,7 +169,18 @@
                 }
                 draw();
             }, 16);
+
         }
+    </script>
+
+    <script>
+        var btn = document.querySelector(".input_button");
+        btn.addEventListener('touchstart', function() {
+            btn.className = "input_button btn-on"
+        })
+        btn.addEventListener('touchend', function() {
+            btn.className = "input_button"
+        })
     </script>
 
 </body>

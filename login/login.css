@@ -85,7 +85,7 @@ a {
     border-bottom: 1px solid #d5d5d5;
 }
 
-#input_button {
+.input_button {
     margin-top: 20px;
     background: #0f88eb;
     box-shadow: none;
@@ -93,7 +93,7 @@ a {
     line-height: 41px;
 }
 
-#input_button button {
+.input_button button {
     font-size: 15px;
     background-color: transparent;
     color: white;
@@ -145,6 +145,10 @@ span {
 #download_app a {
     color: #5fa6e5;
     font-size: 14px;
+}
+
+.btn-on {
+    background-color: grey;
 }
 
 input::-webkit-input-placeholder {
