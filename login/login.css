@@ -163,6 +163,15 @@ a:focus {
     text-decoration: none;
 }
 
+a,
+button,
+input,
+optgroup,
+select,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+}
+
 input::-webkit-input-placeholder {
     font-size: 14px;
     color: rgb(193, 193, 193);
